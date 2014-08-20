@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  symptom: MyText
+  diagnostic: MyText
+  prescription: MyText
+  delivered: MyString
+  pharmacy: 2014-08-18
+  commentable_it: 1
+  commentable_type: MyString
+
+two:
+  symptom: MyText
+  diagnostic: MyText
+  prescription: MyText
+  delivered: MyString
+  pharmacy: 2014-08-18
+  commentable_it: 1
+  commentable_type: MyString

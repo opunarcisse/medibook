@@ -1,0 +1,58 @@
+<h2>Comments List</h2>
+
+<table>  
+<thead>
+
+<div id="comments">
+<% for consult in @consults %>
+  <div class="comment">
+<p>  
+    <%=simple_format consult.symptom %> </p>
+  </div>
+<% end %>
+</div>
+ </thead> 
+
+
+
+<h2>New Comment</h2>
+<tbody>
+
+
+
+ </tbody>
+
+</table>
+
+
+
+<h2>New Comment</h2>
+<%= form_for [@commentable, Consult.new] do |f| %>
+  <div class="field">
+    <%= f.label :symptom %><br />
+    <%= f.text_area :symptom, :size => "40x7" %>
+  </div>
+
+<div class="field">
+    <%= f.label :diagnostic %><br>
+    <%= f.text_area :diagnostic, :size => "40x7" %>
+  </div>
+  <div class="field">
+    <%= f.label :prescription %><br>
+    <%= f.text_area :prescription, :size => "40x7" %>
+  </div>
+  <div class="field">
+    <%= f.label :delivered %><br>
+    <%= f.text_field :delivered %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pharmacy %><br>
+    <%= f.date_select :pharmacy %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Add comment" %>
+  </div>
+
+<% end %>
+

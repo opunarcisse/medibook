@@ -1,0 +1,4 @@
+json.array!(@consults) do |consult|
+  json.extract! consult, :id, :symptom, :diagnostic, :prescription, :delivered, :pharmacy, :commentable_id, :commentable_type
+  json.url consult_url(consult, format: :json)
+end

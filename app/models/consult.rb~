@@ -1,0 +1,5 @@
+class Consult < ActiveRecord::Base
+belongs_to :commentable, :polymorphic => true
+
+validates :symptomm, presence: true
+end

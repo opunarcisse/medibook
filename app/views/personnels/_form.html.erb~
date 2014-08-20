@@ -1,0 +1,52 @@
+<%= form_for(@personnel) do |f| %>
+  <% if @personnel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personnel.errors.count, "error") %> prohibited this personnel from being saved:</h2>
+
+      <ul>
+      <% @personnel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+ <%= select :title,choices=nil, options_for_select([ "select 1", "Dr.", "Prof.", "Mr.", "Mrs", "Miss" ]) %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+ 
+ <div class="field">
+    <%= f.label :specialist %><br>
+    <%= f.text_field :specialist %>
+
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :office %><br>
+    <%= select(:office, choices=nil, Institute.all.collect {|i| [ i.name, i.address, i.id ] })%>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br>
+    <%= f.text_area :remark, :size => "40x5"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
