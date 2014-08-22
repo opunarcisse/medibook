@@ -1,0 +1,42 @@
+<h1>Listing consults</h1>
+
+<div id="comments">
+<% for consult in @consults %>
+  <div class="comment">
+<p>  
+    <%=simple_format consult.patient_complain %> </p>
+  </div>
+<% end %>
+</div>
+
+
+<h2> New Complain </h2>
+
+<%= form_for [@commentable, Consult.new] do |f| %>
+
+
+<div class="field">
+    <%= f.label :patient_complain %><br>
+    <%= f.text_area :patient_complain, :size => "40x5" %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_diagnostic %><br>
+    <%= f.text_area :medical_diagnostic, :size => "40x5" %>
+  </div>
+  <div class="field">
+    <%= f.label :medical_prescription %><br>
+    <%= f.text_area :medical_prescription, :size => "40x5" %>
+  </div>
+  <div class="field">
+    <%= f.label :drugs_delivered %><br>
+       <%= select :drugs_delivered ,choices=nil, options_for_select([ "Select if the drugs have been delivered", "Yes, drugs have been delivered", "No, drugs have not been delivered" ]) %>
+  </div>
+  <div class="field">
+    <%= f.label :drugs_delivered_by %><br>
+      <%= select(:drugs_delivered_by, choices=nil, Institute.all.collect {|i| [ "Test ", i.name, i.visiting_address, i.id ] })%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
