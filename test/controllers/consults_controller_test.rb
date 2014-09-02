@@ -18,7 +18,11 @@ class ConsultsControllerTest < ActionController::TestCase
 
   test "should create consult" do
     assert_difference('Consult.count') do
+<<<<<<< HEAD
       post :create, consult: { commentable_id: @consult.commentable_id, commentable_type: @consult.commentable_type, drugs_delivered: @consult.drugs_delivered, drugs_delivered_by: @consult.drugs_delivered_by, medical_diagnostic: @consult.medical_diagnostic, medical_prescription: @consult.medical_prescription, patient_complain: @consult.patient_complain }
+=======
+      post :create, consult: { commentable_it: @consult.commentable_it, commentable_type: @consult.commentable_type, delivered: @consult.delivered, diagnostic: @consult.diagnostic, pharmacy: @consult.pharmacy, prescription: @consult.prescription, symptom: @consult.symptom }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     end
 
     assert_redirected_to consult_path(assigns(:consult))
@@ -35,7 +39,11 @@ class ConsultsControllerTest < ActionController::TestCase
   end
 
   test "should update consult" do
+<<<<<<< HEAD
     patch :update, id: @consult, consult: { commentable_id: @consult.commentable_id, commentable_type: @consult.commentable_type, drugs_delivered: @consult.drugs_delivered, drugs_delivered_by: @consult.drugs_delivered_by, medical_diagnostic: @consult.medical_diagnostic, medical_prescription: @consult.medical_prescription, patient_complain: @consult.patient_complain }
+=======
+    patch :update, id: @consult, consult: { commentable_it: @consult.commentable_it, commentable_type: @consult.commentable_type, delivered: @consult.delivered, diagnostic: @consult.diagnostic, pharmacy: @consult.pharmacy, prescription: @consult.prescription, symptom: @consult.symptom }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     assert_redirected_to consult_path(assigns(:consult))
   end
 

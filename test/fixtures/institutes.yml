@@ -2,6 +2,7 @@
 
 one:
   name: MyString
+<<<<<<< HEAD
   visiting_address: MyString
   email_address: MyString
   operational_mode: MyString
@@ -17,3 +18,20 @@ two:
   city: MyString
   phone: MyString
   remarks: MyText
+=======
+  address: MyString
+  mode: MyString
+  email: MyString
+  city: MyString
+  phone: MyString
+  remark: MyText
+
+two:
+  name: MyString
+  address: MyString
+  mode: MyString
+  email: MyString
+  city: MyString
+  phone: MyString
+  remark: MyText
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1

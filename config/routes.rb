@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
   resources :personnels do 
  resources :consults
@@ -14,11 +15,31 @@ end
 
  root 'members#index'
 
+=======
+resources :personnels do
+ resources:consults
+end 
+
+resources :institutes do 
+ resources:consults 
+end 
+
+resources :members do 
+ resources:consults
+end
+
+
+ root 'members#index'
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
   # root 'welcome#index'
+=======
+ 
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

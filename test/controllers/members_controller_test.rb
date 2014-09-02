@@ -18,7 +18,11 @@ class MembersControllerTest < ActionController::TestCase
 
   test "should create member" do
     assert_difference('Member.count') do
+<<<<<<< HEAD
       post :create, member: { date_of_birth: @member.date_of_birth, email_address: @member.email_address, first_name: @member.first_name, gender: @member.gender, last_name: @member.last_name, phone: @member.phone, remarks: @member.remarks, residential_city: @member.residential_city }
+=======
+      post :create, member: { bdate: @member.bdate, city: @member.city, email: @member.email, firstname: @member.firstname, gender: @member.gender, lastname: @member.lastname, phone: @member.phone, remark: @member.remark }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     end
 
     assert_redirected_to member_path(assigns(:member))
@@ -35,7 +39,11 @@ class MembersControllerTest < ActionController::TestCase
   end
 
   test "should update member" do
+<<<<<<< HEAD
     patch :update, id: @member, member: { date_of_birth: @member.date_of_birth, email_address: @member.email_address, first_name: @member.first_name, gender: @member.gender, last_name: @member.last_name, phone: @member.phone, remarks: @member.remarks, residential_city: @member.residential_city }
+=======
+    patch :update, id: @member, member: { bdate: @member.bdate, city: @member.city, email: @member.email, firstname: @member.firstname, gender: @member.gender, lastname: @member.lastname, phone: @member.phone, remark: @member.remark }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     assert_redirected_to member_path(assigns(:member))
   end
 

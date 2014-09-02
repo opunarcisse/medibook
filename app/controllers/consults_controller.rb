@@ -4,7 +4,11 @@ class ConsultsController < ApplicationController
   # GET /consults
   # GET /consults.json
   def index
+<<<<<<< HEAD
    @commentable = find_commentable
+=======
+    @commentable = find_commentable
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     @consults = @commentable.consults
   end
 
@@ -25,12 +29,21 @@ class ConsultsController < ApplicationController
   # POST /consults
   # POST /consults.json
   def create
+<<<<<<< HEAD
   @commentable = find_commentable
   @consult = @commentable.consults.new(consult_params)
 
     respond_to do |format|
       if @consult.save
         format.html { redirect_to :id => nil, notice: 'Consult was successfully created.' }
+=======
+    @commentable = find_commentable
+    @consult = @commentable.consults.new(consult_params)
+
+    respond_to do |format|
+      if @consult.save
+        format.html { redirect_to :id => nil , notice: 'Consult was successfully created.' }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
         format.json { render :show, status: :created, location: @consult }
       else
         format.html { render :new }
@@ -71,10 +84,16 @@ class ConsultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def consult_params
+<<<<<<< HEAD
       params.require(:consult).permit(:patient_complain, :medical_diagnostic, :medical_prescription, :drugs_delivered, :drugs_delivered_by, :commentable_id, :commentable_type)
     end
 
 
+=======
+      params.require(:consult).permit(:symptom, :diagnostic, :prescription, :delivered, :pharmacy, :commentable_it, :commentable_type)
+    end
+
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
 private 
 
 def find_commentable
@@ -86,6 +105,10 @@ def find_commentable
   nil
 
 end
+<<<<<<< HEAD
 
 
 end
+=======
+end 
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1

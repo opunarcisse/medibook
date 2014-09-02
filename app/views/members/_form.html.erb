@@ -12,6 +12,7 @@
   <% end %>
 
   <div class="field">
+<<<<<<< HEAD
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
   </div>
@@ -34,14 +35,43 @@
   <div class="field">
     <%= f.label :residential_city %><br>
     <%= f.text_field :residential_city %>
+=======
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= select :gender,choices=nil, options_for_select([ "Select a gender", "Am male", "Am female", "None above" ]) %>
+  </div>
+  <div class="field">
+    <%= f.label :bdate %><br>
+    <%= f.date_select :bdate %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   </div>
   <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>
   <div class="field">
+<<<<<<< HEAD
     <%= f.label :remarks %><br>
     <%= f.text_area :remarks, :size => "40x5"  %>
+=======
+    <%= f.label :remark %><br>
+    <%= f.text_area :remark, :size => "40x5"  %>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   </div>
   <div class="actions">
     <%= f.submit %>

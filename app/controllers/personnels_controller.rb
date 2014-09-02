@@ -69,6 +69,10 @@ class PersonnelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def personnel_params
+<<<<<<< HEAD
       params.require(:personnel).permit(:specialist, :title, :name, :start_date, :email_address, :phone, :duty_station, :remark)
+=======
+      params.require(:personnel).permit(:specialist, :name, :title, :startdate, :email, :phone, :remark, :office)
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     end
 end

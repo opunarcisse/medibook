@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<<<<<<< HEAD
   <strong>Patient complain:</strong>
   <%= @consult.patient_complain %>
 </p>
@@ -27,6 +28,34 @@
 
 <p>
   <strong>Commentable:</strong>
+=======
+  <strong>Symptom:</strong>
+  <%= @consult.symptom %>
+</p>
+
+<p>
+  <strong>Diagnostic:</strong>
+  <%= @consult.diagnostic %>
+</p>
+
+<p>
+  <strong>Prescription:</strong>
+  <%= @consult.prescription %>
+</p>
+
+<p>
+  <strong>Delivered:</strong>
+  <%= @consult.delivered %>
+</p>
+
+<p>
+  <strong>Pharmacy:</strong>
+  <%= @consult.pharmacy %>
+</p>
+
+<p>
+  <strong>Commentable id:</strong>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   <%= @consult.commentable_id %>
 </p>
 
@@ -35,5 +64,9 @@
   <%= @consult.commentable_type %>
 </p>
 
+<<<<<<< HEAD
 <%= link_to 'Edit', edit_member_consult_path(:member_id, @consult) %> |
+=======
+<%= link_to 'Edit', edit_member_consult_path(@consult) %> |
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
 <%= link_to 'Back', member_consults_path %>

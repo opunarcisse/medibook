@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   patient_complain: MyText
   medical_diagnostic: MyText
   medical_prescription: MyText
@@ -16,4 +17,21 @@ two:
   drugs_delivered: MyString
   drugs_delivered_by: MyString
   commentable_id: 1
+=======
+  symptom: MyText
+  diagnostic: MyText
+  prescription: MyText
+  delivered: MyString
+  pharmacy: 2014-08-18
+  commentable_it: 1
+  commentable_type: MyString
+
+two:
+  symptom: MyText
+  diagnostic: MyText
+  prescription: MyText
+  delivered: MyString
+  pharmacy: 2014-08-18
+  commentable_it: 1
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   commentable_type: MyString

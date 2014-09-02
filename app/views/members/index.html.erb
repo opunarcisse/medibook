@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+<<<<<<< HEAD
       <th>First name</th>
       <th>Last name</th>
       <th>Gender</th>
@@ -11,6 +12,16 @@
       <th>Residential city</th>
       <th>Phone</th>
       <th>Remarks</th>
+=======
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Gender</th>
+      <th>Bdate</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Phone</th>
+      <th>Remark</th>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +29,7 @@
   <tbody>
     <% @members.each do |member| %>
       <tr>
+<<<<<<< HEAD
         <td><%= member.first_name %></td>
         <td><%= member.last_name %></td>
         <td><%= member.gender %></td>
@@ -26,6 +38,16 @@
         <td><%= member.residential_city %></td>
         <td><%= member.phone %></td>
         <td><%= member.remarks %></td>
+=======
+        <td><%= member.firstname %></td>
+        <td><%= member.lastname %></td>
+        <td><%= member.gender %></td>
+        <td><%= member.bdate %></td>
+        <td><%= member.email %></td>
+        <td><%= member.city %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.remark %></td>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
         <td><%= link_to 'Show', member %></td>
         <td><%= link_to 'Edit', edit_member_path(member) %></td>
         <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>

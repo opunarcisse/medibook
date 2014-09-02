@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Specialist</th>
+<<<<<<< HEAD
       <th>Title</th>
       <th>Name</th>
       <th>Start date</th>
@@ -11,6 +12,15 @@
       <th>Phone</th>
       <th>Duty station</th>
       <th>Remark</th>
+=======
+      <th>Name</th>
+      <th>Title</th>
+      <th>Startdate</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Remark</th>
+      <th>Office</th>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,6 +29,7 @@
     <% @personnels.each do |personnel| %>
       <tr>
         <td><%= personnel.specialist %></td>
+<<<<<<< HEAD
         <td><%= personnel.title %></td>
         <td><%= personnel.name %></td>
         <td><%= personnel.start_date %></td>
@@ -26,6 +37,15 @@
         <td><%= personnel.phone %></td>
         <td><%= personnel.duty_station %></td>
         <td><%= personnel.remark %></td>
+=======
+        <td><%= personnel.name %></td>
+        <td><%= personnel.title %></td>
+        <td><%= personnel.startdate %></td>
+        <td><%= personnel.email %></td>
+        <td><%= personnel.phone %></td>
+        <td><%= personnel.remark %></td>
+        <td><%= personnel.office %></td>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
         <td><%= link_to 'Show', personnel %></td>
         <td><%= link_to 'Edit', edit_personnel_path(personnel) %></td>
         <td><%= link_to 'Destroy', personnel, method: :delete, data: { confirm: 'Are you sure?' } %></td>

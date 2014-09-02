@@ -12,17 +12,23 @@
   <% end %>
 
   <div class="field">
+<<<<<<< HEAD
     <%= f.label :specialist %><br>
     <%= f.text_field :specialist %>
   </div>
   <div class="field">
     <%= f.label :title %><br>
      <%= select :title,choices=nil, options_for_select([ "Select a suitable title ", "Dr.", "Prof.", "Mr.", "Mrs", "Miss" ]) %>
+=======
+    <%= f.label :title %><br>
+ <%= select :title,choices=nil, options_for_select([ "Select one", "Dr.", "Prof.", "Mr.", "Mrs", "Miss" ]) %>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+<<<<<<< HEAD
   <div class="field">
     <%= f.label :start_date %><br>
     <%= f.date_select :start_date %>
@@ -30,19 +36,43 @@
   <div class="field">
     <%= f.label :email_address %><br>
     <%= f.text_field :email_address %>
+=======
+ 
+ <div class="field">
+    <%= f.label :specialist %><br>
+    <%= f.text_field :specialist %>
+
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   </div>
   <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>
   <div class="field">
+<<<<<<< HEAD
     <%= f.label :duty_station %><br>
      <%= select(:duty_station, "Institute.name", Institute.all.collect {|i| [ i.name, i.visiting_address, i.id ] } , { include_blank: true })%>
+=======
+    <%= f.label :office %><br>
+    <%= select(:office, choices=nil, Institute.all.collect {|i| [ i.name, i.address, i.id ] })%>
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   </div>
   <div class="field">
     <%= f.label :remark %><br>
     <%= f.text_area :remark, :size => "40x5"  %>
   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
   <div class="actions">
     <%= f.submit %>
   </div>

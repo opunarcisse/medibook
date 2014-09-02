@@ -2,6 +2,7 @@
 
 one:
   specialist: MyString
+<<<<<<< HEAD
   title: MyString
   name: MyString
   start_date: 2014-08-22
@@ -19,3 +20,22 @@ two:
   phone: MyString
   duty_station: MyString
   remark: MyText
+=======
+  name: MyString
+  title: MyString
+  startdate: 2014-08-18
+  email: MyString
+  phone: MyString
+  remark: MyText
+  office: MyString
+
+two:
+  specialist: MyString
+  name: MyString
+  title: MyString
+  startdate: 2014-08-18
+  email: MyString
+  phone: MyString
+  remark: MyText
+  office: MyString
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1

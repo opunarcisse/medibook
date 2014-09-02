@@ -18,7 +18,11 @@ class InstitutesControllerTest < ActionController::TestCase
 
   test "should create institute" do
     assert_difference('Institute.count') do
+<<<<<<< HEAD
       post :create, institute: { city: @institute.city, email_address: @institute.email_address, name: @institute.name, operational_mode: @institute.operational_mode, phone: @institute.phone, remarks: @institute.remarks, visiting_address: @institute.visiting_address }
+=======
+      post :create, institute: { address: @institute.address, city: @institute.city, email: @institute.email, mode: @institute.mode, name: @institute.name, phone: @institute.phone, remark: @institute.remark }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     end
 
     assert_redirected_to institute_path(assigns(:institute))
@@ -35,7 +39,11 @@ class InstitutesControllerTest < ActionController::TestCase
   end
 
   test "should update institute" do
+<<<<<<< HEAD
     patch :update, id: @institute, institute: { city: @institute.city, email_address: @institute.email_address, name: @institute.name, operational_mode: @institute.operational_mode, phone: @institute.phone, remarks: @institute.remarks, visiting_address: @institute.visiting_address }
+=======
+    patch :update, id: @institute, institute: { address: @institute.address, city: @institute.city, email: @institute.email, mode: @institute.mode, name: @institute.name, phone: @institute.phone, remark: @institute.remark }
+>>>>>>> 0f4c01a4e2ea72be6a09a2959b5411bf484777d1
     assert_redirected_to institute_path(assigns(:institute))
   end
 
