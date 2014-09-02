@@ -5,7 +5,7 @@ class ConsultsController < ApplicationController
   # GET /consults.json
   def index
    @commentable = find_commentable
-    @consults = @commentable.consult
+    @consults = @commentable.consults
   end
 
   # GET /consults/1

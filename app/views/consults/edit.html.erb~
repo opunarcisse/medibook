@@ -30,4 +30,4 @@
 <% end %>
 
 <%= link_to 'Show', @consult %> |
-<%= link_to 'Back', consults_path %>
+

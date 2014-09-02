@@ -1,0 +1,23 @@
+class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+
+ protect_from_forgery with: :null_session, if: Proc.new { |c|    c.request.format == 'application/json' }
+
+
+   skip_before_filter :check_request_exception # filter the plugin installed
+
+   prepend_before_filter :return_409_on_json_errors # custom before filter use request_exception to detect occured errors
+
+   private
+   def return_409_on_json_errors
+    if e = request_exception && e.is_a?(ActiveSupport::JSON::ParseError)
+      head 409
+    else
+      head 500
+    end
+  end
+
+
+end
